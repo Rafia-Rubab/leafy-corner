@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: "Trebuchet MS", Verdana, sans-serif; background: #f4f8f1; color: #1f3326; }
+
+/* Header */
+.site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 20px 8%; background: #fff; border-bottom: 1px solid #dfe9d8; }
+.logo { font-size: 26px; font-weight: bold; }
+.logo span { color: #3f8f4f; }
+nav { display: flex; gap: 28px; }
+nav a { text-decoration: none; color: #3b5443; font-size: 14px; }
+nav a:hover { color: #3f8f4f; }
+.cart { font-size: 14px; font-weight: bold; }
+
+/* Hero */
+.hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #dcedd3, #f0f6d9); }
+.tagline { color: #3f8f4f; font-size: 12px; letter-spacing: 3px; margin-bottom: 16px; }
+.hero h1 { font-size: clamp(28px, 5vw, 44px); margin-bottom: 14px; }
+.hero p:not(.tagline) { color: #4d6556; max-width: 500px; margin: 0 auto 24px; line-height: 1.7; }
+.shop-btn { display: inline-block; background: #1f3326; color: #fff; padding: 13px 28px; border-radius: 30px; text-decoration: none; font-size: 14px; transition: background .3s, transform .3s; }
+.shop-btn:hover { background: #3f8f4f; transform: scale(1.05); }
+
+/* Products */
+#products { padding: 60px 8%; }
+.section-heading { text-align: center; margin-bottom: 40px; }
+.section-heading h2 { font-size: 30px; margin-bottom: 8px; }
+.section-heading p { color: #7a8f80; font-size: 14px; }
+
+/* Auto-responsive grid: no media queries */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 26px;
+}
+
+.card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #e1ecd9; transition: transform .3s ease, box-shadow .3s ease, border-color .3s; }
+.card:hover { transform: translateY(-8px) rotate(-0.5deg); box-shadow: 0 16px 32px rgba(63,143,79,.22); border-color: #3f8f4f; }
+
+.image-box { height: 200px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.image-box img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card:hover .image-box img { transform: scale(1.08); }
+.emoji { font-size: 80px; transition: transform .4s ease; }
+.card:hover .emoji { transform: scale(1.2) rotate(6deg); }
+.leaf-a { background: linear-gradient(135deg, #c8e6c0, #e8f5d8); }
+.leaf-b { background: linear-gradient(135deg, #f7e7b4, #fcf5d9); }
+.leaf-c { background: linear-gradient(135deg, #f8d3e0, #fdeaf0); }
+.leaf-d { background: linear-gradient(135deg, #b9e0cf, #dcf2e8); }
+.leaf-e { background: linear-gradient(135deg, #e6d6c4, #f5ece2); }
+.leaf-f { background: linear-gradient(135deg, #c5e0f2, #e3f1fa); }
+
+.badge { position: absolute; top: 14px; left: 14px; background: #3f8f4f; color: #fff; padding: 5px 10px; font-size: 10px; border-radius: 20px; letter-spacing: 1px; }
+
+.card-body { padding: 20px; }
+.rating { color: #e3a21a; font-size: 13px; margin-bottom: 10px; }
+.rating small { color: #8fa095; margin-left: 5px; }
+.card-body h3 { font-size: 19px; margin-bottom: 8px; }
+.card-body p { color: #667a6d; font-size: 13px; line-height: 1.6; min-height: 62px; }
+.purchase { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; }
+.price { font-size: 22px; font-weight: bold; }
+button { background: #1f3326; color: #fff; border: none; padding: 11px 16px; border-radius: 20px; cursor: pointer; transition: background .3s, transform .2s; }
+button:hover { background: #3f8f4f; transform: translateY(-2px); }
+
+/* Footer */
+.site-footer { text-align: center; padding: 32px 20px; background: #1f3326; }
+.site-footer p { color: #c9dccd; font-size: 13px; }
